@@ -1,119 +1,125 @@
-# Car_Performance_Analysis
+# Car Performance Analysis – Statistical & Visual Exploration
 
-**Dataset Overview**
+A detailed exploratory data analysis (EDA) on 32 classic car models, examining performance metrics such as mileage, horsepower, cylinders, weight, acceleration, and transmission type. This dataset is widely used for statistical modeling and machine-learning studies.
 
-The dataset contains 32 car models with 12 performance-related attributes, widely used for statistical and machine learning studies.
+---
 
-Features include:
+## Dataset Overview
 
-model
+The dataset contains **32 car models** and **12 performance-related attributes**, including:
 
-mpg (Miles per gallon)
+- model  
+- mpg (Miles per gallon)  
+- cyl (Number of cylinders)  
+- disp (Displacement)  
+- hp (Horsepower)  
+- drat (Rear axle ratio)  
+- wt (Weight)  
+- qsec (Quarter-mile time)  
+- vs (Engine type: V/Straight)  
+- am (Transmission: Automatic/Manual)  
+- gear (Number of gears)  
+- carb (Number of carburetors)  
 
-cyl (Number of cylinders)
+---
 
-disp (Displacement)
+## Data Preparation
 
-hp (Horsepower)
+Steps performed:
 
-drat (Rear axle ratio)
+- Loaded dataset using pandas  
+- Verified data shape (**32 × 12**)  
+- Confirmed **no missing values**  
+- Inspected data types of each column  
+- Displayed initial and final rows for structural understanding  
+- Extracted numeric columns for correlation analysis  
+- Prepared data for visual and statistical exploration  
 
-wt (Weight)
+---
 
-qsec (1/4 mile time)
+## Analysis & Visualizations
 
-vs (Engine type: V/Straight)
+### Cylinders Distribution
+Count plot showing frequency of 4-, 6-, and 8-cylinder cars.
 
-am (Transmission: Automatic/Manual)
+### Horsepower Distribution
+High variation across models; plotted with countplot for frequency understanding.
 
-gear (Number of gears)
+### Gear Distribution
+3-gear cars are most common, followed by 4 and 5 gears.
 
-carb (Number of carburetors)
+### Model Count Plot
+Each car model appears exactly once, validating dataset uniqueness.
 
-Data Preparation
+### Correlation Heatmap
+Key relationships identified:
 
-In the notebook, I:
+- **mpg** is strongly **negatively correlated** with **wt** and **hp**  
+- **hp** is strongly **positively correlated** with **disp**  
+- **wt** correlates with **qsec** (heavier cars take longer to accelerate)  
+- **am (manual transmission)** often aligns with higher mpg and drat  
 
- Loaded the dataset using pandas
- Checked data shape → 32 rows × 12 columns
- Verified no missing values
- Checked data types for all columns
- Displayed first and last few rows for structure understanding
- Extracted numeric columns for correlation analysis
- Prepared data for visual exploration
+---
 
-**Analysis & Visualizations**
+## Key Insights
 
-The notebook includes multiple visualizations and statistical summaries:
+- Heavier and more powerful cars have significantly lower fuel efficiency.  
+- Manual transmission cars tend to achieve better mileage.  
+- 8-cylinder models dominate but perform poorly in mpg.  
+- Displacement and horsepower rise together—large engines produce more power.  
+- High-performance cars (e.g., Ferrari Dino, Maserati Bora) sacrifice fuel economy for speed.  
+- 4-cylinder cars provide the best balance of efficiency, weight, and horsepower.  
 
-1. Cylinders Distribution
+---
 
-Count plot showing distribution of 4-, 6-, and 8-cylinder vehicles.
+## Technologies Used
 
-2. Horsepower Distribution
+- Python  
+- Pandas  
+- NumPy  
+- Matplotlib  
+- Seaborn  
+- Jupyter Notebook  
 
-High variation in horsepower across car models.
-Count plot used for basic frequency overview.
+---
 
-3. Gear Distribution
+## How to Run the Project
 
-3-gear cars are the most common, followed by 4 and 5 gears.
+### Clone the Repository
+` ` `bashgit clone https://github.com/yourusername/CarsAnalysis.git
+### Install Required Packages
+bash
 
-4. Model Count Plot
+Copy code
 
-Shows each car model appears once (as expected), verifying dataset uniqueness.
-
-5. Correlation Heatmap
-
-A heatmap revealed key relationships:
-
-mpg is strongly negatively correlated with wt and hp
-hp is positively correlated with disp
-wt is highly correlated with qsec (acceleration time)
-am (manual) tends to be associated with higher mpg and drat
-
-**Key Insights**
-
-Cars with higher weight and horsepower have lower mileage (mpg).
-Manual transmission (am = 1) often corresponds to better fuel efficiency.
-Cars with 8 cylinders dominate the dataset but show poor fuel economy.
-Displacement and horsepower move together—larger engines produce more power.
-Performance cars (like Ferrari Dino, Maserati Bora) have high hp but lower mpg.
-Cars with 4 cylinders demonstrate the best balance of mpg, weight, and hp.
-
-Language & Libraries Used
-
-Python
-Pandas
-NumPy
-Matplotlib
-Seaborn
-
-**Jupyter Notebook**
-
-**How to Run**
-Clone the repository:
-git clone https://github.com/yourusername/CarsAnalysis.git
-
-Install required packages:
 pip install pandas numpy matplotlib seaborn
 
-Open the notebook:
+Open the Notebook
+
+bash
+
+Copy code
+
 jupyter notebook CarsAnalysis.ipynb
 
-**Future Improvements**
+## Future Improvements
+- Add a regression model to predict mpg
 
-Add regression model to predict mpg
-Cluster cars into performance groups
-Build an interactive dashboard (Streamlit / Plotly)
-Add outlier detection & deeper statistical modeling
-Compare classic cars with modern datasets
+- Cluster cars into performance groups
 
-Contributing
+- Build an interactive dashboard (Streamlit / Plotly)
 
-Pull requests are welcome!
-Feel free to add insights, new visualizations, or modeling approaches.
+- Add outlier detection and advanced statistical modeling
 
-If You Found This Useful
+- Compare classic cars with modern vehicle datasets
 
-Star the repository to support more data analysis projects!
+---
+
+## Contributing
+Pull requests are welcome.
+Feel free to add new insights, visualizations, or modeling approaches.
+
+---
+
+## Support
+If you found this project helpful, consider starring the repository to support more data analysis work.
