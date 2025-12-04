@@ -86,7 +86,8 @@ Key relationships identified:
 ## How to Run the Project
 
 ### Clone the Repository
-` ` `bashgit clone https://github.com/yourusername/CarsAnalysis.git
+bash
+```git clone https://github.com/yourusername/CarsAnalysis.git```
 ### Install Required Packages
 bash
 
